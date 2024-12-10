@@ -2,8 +2,27 @@ public class main {
 public static void main(String[] args){
     System.out.println("Snake and ladder Simulator!");
     // uc1 initial_position is 0
-    int initial_position = 0;
+    int position_of_the_player = 0;
     int die = (int)(Math.random()*6) + 1;
-    System.out.println("the number throwed by the player : " + die);
+    int options = (int)(Math.random()*3);
+    // 0 for no play
+    // 1 for ladder
+    // 2 for snake
+    int temp = position_of_the_player;
+    switch (options){
+        case 0 -> position_of_the_player += 0;
+        case 1 -> position_of_the_player += options;
+        case 2 -> position_of_the_player -= options;
+    }
+    if(position_of_the_player > 100){
+        // sets the same value if the player get more than 100
+        position_of_the_player = temp;
+    }
+    if(position_of_the_player < 0){
+        // set the value to 0
+        position_of_the_player = 0;
+    }
+    System.out.println("updated position of the player : " + position_of_the_player);
+
 }
 }
