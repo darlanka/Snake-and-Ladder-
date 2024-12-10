@@ -1,5 +1,6 @@
 public class main {
 public static void main(String[] args){
+    // uc 6
     System.out.println("Snake and ladder Simulator!");
     // uc1 initial_position is 0
     int position_of_the_player = 0;
